@@ -1,0 +1,1 @@
+<div class="void-error"> {{$message}} </div>

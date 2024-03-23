@@ -1,0 +1,192 @@
+/* @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@tailwind base;
+
+@layer base {
+    html {
+        /* @apply text-surface; */
+        @apply bg-white;
+    }
+
+    /* html.dark {
+        @apply text-neutral-50;
+        @apply bg-body-dark;
+    } */
+}
+
+@tailwind components;
+@tailwind utilities;
+
+p {
+    @apply leading-[1.6];
+}
+body{
+    background: whitesmoke;
+}
+* {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+/* #title{
+    font-family: "Dancing Script", cursive;
+} */
+
+
+@layer components {
+    .dash-active-link {
+        @apply text-gray-800;
+    }
+
+    .active-link {
+        @apply border-l-4 bg-gray-600 bg-opacity-25 border-gray-100 text-gray-100 !important
+    }
+
+    .form-input {
+        @apply block w-full px-4 py-2 text-base  text-gray-700 border border-gray-300 rounded-lg transition ease-in-out m-0  placeholder:text-gray-500 placeholder:text-sm focus:outline-none
+    }
+
+    .form-container {
+        @apply px-4 py-3 mb-8 bg-white rounded-lg shadow-md;
+    }
+
+    .bg-main {
+        @apply bg-main-100;
+    }
+
+    .bg-main-hov {
+        @apply bg-[#008080];
+    }
+
+    .bg-secondary {
+        @apply bg-[#787878];
+    }
+
+    .bg-secondary-hov {
+        @apply bg-[#606060];
+    }
+
+    .border-main {
+        @apply border-main-100;
+    }
+
+    .border-secondary {
+        @apply border-[#f1c91c];
+    }
+
+    .text-main {
+        @apply text-main-100;
+    }
+
+    .text-secondary {
+        @apply text-[#f1c91c];
+    }
+
+    .btn {
+        @apply flex items-center w-full max-w-fit px-4 py-2 text-white font-light transition-colors duration-150 border-transparent rounded-lg;
+    }
+
+    .btn-main {
+        @apply btn bg-main active:bg-main-hov hover:bg-main-hov focus:outline-none;
+    }
+
+    .btn-secondary {
+        @apply btn bg-secondary active: bg-secondary-hov hover:bg-secondary-hov focus:outline-none;
+    }
+
+    .datatable-button {
+        @apply btn bg-secondary active: bg-secondary-hov hover:bg-secondary-hov focus:outline-none;
+    }
+
+    .dash-page-title {
+        @apply my-6 text-2xl font-semibold text-gray-700;
+    }
+
+    .custom-file-input {
+        @apply block w-full text-sm text-slate-500 file: mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-main hover:file:bg-violet-100 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50
+    }
+
+    .form-input.is-invalid {
+        @apply border-red-500 ring-1 ring-red-400 ring-opacity-60 focus:border-red-400 focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 !important;
+    }
+
+
+    .pagination {
+        @apply inline-flex -space-x-px;
+    }
+
+    .pagination .paginate_button.previous .page-link {
+        @apply py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700;
+    }
+
+    .pagination .paginate_button .page-link {
+        @apply py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700
+    }
+
+    .pagination .paginate_button.active .page-link {
+        @apply py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 
+    }
+
+    .pagination .paginate_button.next .page-link {
+        @apply py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 
+    }
+
+}
+
+
+
+
+.form-group.required label:after {
+    content: "*";
+    margin-left: 3px;
+    color: red;
+}
+
+.form-divider {
+    width: 100%;
+    height: 2px;
+    background: #e8e8e8;
+    position: relative;
+    z-index: 1;
+}
+
+.divider-text {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 auto;
+    font-style: italic;
+    line-height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    color: #777;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+#fc-dom-1 {
+    text-transform: capitalize;
+}
+
+.preload {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.preload img {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border: 5px solid #01A8B6;
+    object-fit: cover;
+}
